@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Socket &mdash; amebaDocs 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> amebaDocs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Socket</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">amebaDocs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Socket</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/source/api/MicroPython_Socket.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="socket">
+<h1>Socket<a class="headerlink" href="#socket" title="Permalink to this headline">¶</a></h1>
+<p><strong>class socket – Socket Network Programming</strong></p>
+<p><strong>Examples</strong></p>
+<ul class="simple">
+<li><p><strong>Echo Server and Client example:</strong></p></li>
+</ul>
+<p>Materials:</p>
+<ul class="simple">
+<li><p>Ameba x 2</p></li>
+</ul>
+<blockquote>
+<div><p>Steps:</p>
+<p>After WiFi is set up, the best way to access the internet is to use
+socket. Socket is like an imaginary ethernet socket by which you use
+to connect your PC to some server on the internet like Google or
+Github. Application layer protocol like HTTP are also built on top of
+socket. Once you are given an IP address and a port number, you can
+start to connect to the remote device and talk to it.</p>
+<p><a class="reference internal" href="../../_images/imageSocket.png"><img alt="image1" src="../../_images/imageSocket.png" style="width: 3.44028in; height: 3.90486in;" /></a></p>
+<p>Here is an example of letting a server socket and a client socket to
+echo each other’s message, to use this example, you need 2 ameba
+RTL8722 running MicroPython, copy and paste the following code to 2
+ameba respectively under REPL paste mode.</p>
+<p>This is the server code,</p>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">wireless</span> <span class="kn">import</span> <span class="n">WLAN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wifi</span> <span class="o">=</span> <span class="n">WLAN</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="n">WLAN</span><span class="o">.</span><span class="n">STA</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wifi</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssid</span> <span class="o">=</span> <span class="s2">&quot;YourWiFiSSID&quot;</span><span class="p">,</span> <span class="n">pswd</span> <span class="o">=</span> <span class="s2">&quot;YourWiFiPassword&quot;</span><span class="p">)</span> <span class="c1"># change the ssid and pswd to yours</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">port</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="go">    data = conn.recv(1024)</span>
+<span class="go">    conn.send(data+&quot;from server&quot;)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>This is the client code,</p>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">wireless</span> <span class="kn">import</span> <span class="n">WLAN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wifi</span> <span class="o">=</span> <span class="n">WLAN</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="n">WLAN</span><span class="o">.</span><span class="n">STA</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wifi</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssid</span> <span class="o">=</span> <span class="s2">&quot;YourWiFiSSID&quot;</span><span class="p">,</span> <span class="n">pswd</span> <span class="o">=</span> <span class="s2">&quot;YourWiFiPassword&quot;</span><span class="p">)</span> <span class="c1"># change the ssid and pswd to yours</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK</span><span class="p">()</span>
+<span class="go"># make sure to check the server IP address and update in the next line of code</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;your server IP address&quot;</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Get information from HTTP website:</strong></p></li>
+</ul>
+<p>Materials:</p>
+<ul class="simple">
+<li><p>Ameba x 1</p></li>
+</ul>
+<blockquote>
+<div><p>Steps:</p>
+<p>With socket created, we can visit an HTTP website and get information
+from it. Copy and paste the following code into REPL under paste
+mode.</p>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">wireless</span> <span class="kn">import</span> <span class="n">WLAN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wifi</span> <span class="o">=</span> <span class="n">WLAN</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="n">WLAN</span><span class="o">.</span><span class="n">STA</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wifi</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssid</span> <span class="o">=</span> <span class="s2">&quot;YourWiFiSSID&quot;</span><span class="p">,</span> <span class="n">pswd</span> <span class="o">=</span> <span class="s2">&quot;YourPassword&quot;</span><span class="p">)</span> <span class="c1"># change the ssid and pswd to yours</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">http_get</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="go">    _, _, host, path = url.split(&#39;/&#39;, 3)</span>
+<span class="go">    c = socket.SOCK()</span>
+<span class="go">    # We are visiting MicroPython official website&#39;s test page</span>
+<span class="go">    c.connect(host, 80)</span>
+<span class="go">    c.send(bytes(&#39;GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n&#39; % (path, host), &#39;utf8&#39;))</span>
+<span class="go">    while True:</span>
+<span class="go">        data = c.recv(100)</span>
+<span class="go">        if data:</span>
+<span class="go">            print(str(data,&#39;utf8&#39;), end=&#39;&#39;)</span>
+<span class="go">        else:</span>
+<span class="go">            break</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">http_get</span><span class="p">(</span><span class="s1">&#39;http://micropython.org/ks/test.html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Constructors</strong></p>
+<p><strong>socket.SOCK(</strong><em>domain</em>[optional], <em>type</em>[optional]<strong>)</strong></p>
+<p>Create a SOCK object and configure it with the given parameters. SOCK
+class is under socket class and is the main class we use for all socket
+level communications.</p>
+<ul class="simple">
+<li><p><strong>domain</strong>: domain address family type. Default is AF_INET</p>
+<ul>
+<li><p><strong>AF_INET</strong>: IPv4, classic IP address with dot-notation that is
+slowly being replaced by IPv6 due to shortage.</p></li>
+<li><p><strong>AF_INET6</strong>: IPv6, IP address with colon-notation</p></li>
+</ul>
+</li>
+<li><p><strong>type:</strong> socket type, default is SOCK_STREAM</p>
+<ul>
+<li><p><strong>SOCK_STREAM:</strong> TCP type</p></li>
+<li><p><strong>SOCK_DGRAM:</strong> UDP type</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Methods</strong></p>
+<p><strong>socket.SOCK.connect(</strong><em>host</em>[required], <em>port</em>[required]<strong>)</strong></p>
+<p>This method connects to a remote server as client.</p>
+<ul class="simple">
+<li><p><strong>host:</strong> a website address in string</p></li>
+<li><p><strong>port:</strong> port number in integer</p></li>
+</ul>
+<p><strong>socket.SOCK.bind(</strong><em>port</em>[required]<strong>)</strong></p>
+<p>This method creates a server socket and binds it to the given port
+number.</p>
+<ul class="simple">
+<li><p><strong>port:</strong> port number in integer</p></li>
+</ul>
+<p><strong>socket.SOCK.listen()</strong></p>
+<p>This method set the server to listening state, waiting for client
+connection at the given port.</p>
+<p><strong>socket.SOCK.accept()</strong></p>
+<p>This method accepts a client connection and return a new socket object
+for subsequent communication and client’s address.</p>
+<p><strong>socket.SOCK.recv(</strong><em>length</em>[required]<strong>)</strong></p>
+<p>This method receive data with given length</p>
+<ul class="simple">
+<li><p><strong>length:</strong> the length of data expected to receive</p></li>
+</ul>
+<p><strong>socket.SOCK.send(</strong><em>buffer</em>[required]<strong>)</strong></p>
+<p>This method sends data stored in the buffer</p>
+<ul class="simple">
+<li><p><strong>buffer:</strong> a data buffer in format of array/bytearray/string</p></li>
+</ul>
+<p><strong>socket.SOCK.settimeout(</strong><em>seconds</em>[required]<strong>)</strong></p>
+<p>This method set socket’s timeout to the given value</p>
+<ul class="simple">
+<li><p><strong>seconds:</strong> new timeout in seconds</p></li>
+</ul>
+<p><strong>socket.SOCK.close()</strong></p>
+<p>This method close the socket.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Simon XI.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
