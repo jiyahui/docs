@@ -8,19 +8,18 @@ Welcome to amebaDocs's documentation!
 This is the Ameba MicroPython online documentation
 |image1|
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Table of Contents:
    
-   source/gettingStarted/getting_started
-   source/API <api/index>
-   HDK
-   Download
-   Resource
-   Support
-   source/arduino/ClassWiFi
-   source/arduino/RTCAlarm
-   
+   getting_started/index
+   download/index
+   examples/index
+   board_hdk/index
+   api_documents/index
+   resources/index
+   support/index   
 
 Search
 ==================
@@ -28,6 +27,6 @@ Search
 * :ref:`search`
 
 
-.. |image1| image:: imageIndex.jpg
+.. |image1| image:: media/imageIndex.jpg
    :width: 5.44028in
    :height: 2.90486in
