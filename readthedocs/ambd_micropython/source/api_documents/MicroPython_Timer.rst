@@ -3,41 +3,6 @@ Timer
 
 
 
-**class Timer – General Timers**
-
-**Examples**
-
--  **Periodical timer:**
-
-Materials:
-
--  Ameba x 1
-
-..
-
-   Steps:
-
-There are 3 sets of general timers available to user, each at 32KHz,
-they are timer 1/2/3.
-
-Here we use timer 1 as example to demonstrate how a periodical timer
-works.
-
-Copy and paste the first 3 lines of code into REPL to see its effect.
-
-
->>> from machine import Timer
->>> t = Timer(1)  # Use Timer 1/2/3 only
->>> t.start(2000000, t.PERIODICAL)  # Set GTimer fired periodically at duration of 2 seconds, printing text on the terminal
-# To stop the periodical timer, type 
->>> t.stop()
-
-
-A text of “--timer triggered. to stop: type t.stop()--” will be printed
-on the terminal every 2 seconds
-
-To stop the timer, simply type t.stop()
-
 **Constructors**
 
 **Timer(**\ *unit*\ [optional]\ **)**

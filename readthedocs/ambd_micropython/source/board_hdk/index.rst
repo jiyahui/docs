@@ -7,11 +7,7 @@
 Board HDK
 =====================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Board HDK:
 
-   Layout
-   Schematic
-   
+:download:`Layout <../media/RTL-AMEBAD-Layout.zip>`
 
+:download:`Schematic <../media/RTL-AMEBD-Schematic.zip>`

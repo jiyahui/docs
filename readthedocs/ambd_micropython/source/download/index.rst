@@ -7,12 +7,12 @@
 Download
 =====================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Download:
+:download:`Datesheet <../media/1612857505000_UM0401_RTL872xD_Datasheet_v2.9.pdf>`
 
-   Datasheet
-   User_Manual
-   Release_History
+:download:`User Manual <../media/1612857668000_AN0400_Ameba-D_Application_Note_v13.pdf>`
+
+:doc:`Release_History`
+
+
    
 

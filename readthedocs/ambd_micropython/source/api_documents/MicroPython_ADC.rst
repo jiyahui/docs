@@ -2,32 +2,6 @@
 ADC
 ===
 
-**class ADC – analog to digital conversion**
-
-**Examples**
-
--  **ADC read potentiometer:**
-
-Materials:
-
--  Ameba x 1
-
--  Potentiometer x 1
-
-..
-
-   Steps:
-
-   |image1|\ Here we connect ameba to a potentiometer to measure its
-   analogue value, the connection is as follows,
-
-   Copy and paste the following code into REPL.
-
-**from** machine **import** ADC
-
-a **=** ADC\ **(**\ 0\ **)**
-
-a\ **.**\ read\ **()**
 
 **Constructors**
 

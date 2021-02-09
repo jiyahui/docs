@@ -10,10 +10,10 @@ This is the Ameba MicroPython online documentation
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Table of Contents:
    
-   getting_started/index
+   getting_started/getting_started
    download/index
    examples/index
    board_hdk/index

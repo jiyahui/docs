@@ -2,52 +2,6 @@ WiFi
 ====
 
 
-**class WLAN – Wireless Local Area Network**
-
-**Examples**
-
--  **WiFi Scan:**
-
-Materials:
-
--  Ameba x 1
-
-..
-
-   Steps:
-
-   WiFi Scan function can help us quickly discover what WiFi networks
-   are available in our surrounding. This example does not require any
-   additional hardware, thus simply copy, and paste the following code
-   into REPL to see its effect.
-
-
->>> from wireless import WLAN
->>> wifi = WLAN(mode = WLAN.STA)
->>> wifi.scan()
-
-
--  **WiFi Connect:**
-
-Materials:
-
--  Ameba x 1
-
-..
-
-   Steps:
-
-   Ameba can connect to WiFi access point with open security or WPA2
-   security type, which is the most common security type used in
-   household wireless routers. Here we are going to connect to a WiFi
-   access point using code below, copy and paste the following code line
-   by line into REPL to see their effects.
-
->>> from wireless import WLAN
->>> wifi = WLAN(mode = WLAN.STA)
->>> wifi.connect(ssid = "YourWiFiName", pswd = "YourWiFiPassword")
-
-
 **Constructors**
 
 **WLAN(**\ *mode*\ [required]\ **)**

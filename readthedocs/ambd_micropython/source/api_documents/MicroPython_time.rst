@@ -3,35 +3,6 @@ time
 
 
 
-**class time – Delay and timing**
-
-**Examples**
-
--  **Delay and timing:**
-
-Materials:
-
--  Ameba x 1
-
-..
-
-   Steps:
-
-MicroPython has provided rich functions to deal with time and delay,
-here are some examples.
-
-Copy and paste the following code line by line into REPL to see its
-effect.
-
-
->>> import time
->>> time.sleep(1)           # sleep for 1 second
->>> time.sleep_ms(500)      # sleep for 500 milliseconds
->>> time.sleep_us(10)       # sleep for 10 microseconds
->>> start = time.ticks_ms() # get millisecond counter
-
-
-
 **Constructors**
 
 **N.A.**

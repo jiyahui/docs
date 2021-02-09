@@ -3,59 +3,6 @@ UART
 
 
 
-**class UART – Universal Asynchronous Receiver/Transmitter**
-
-**Examples**
-
--  **UART send and recv**
-
-Materials:
-
--  Ameba x 1
-
--  TTL USB to Serial module x 1
-
-..
-
-   Steps:
-
-   UART is a very versatile communication protocol and almost an
-   essential part of a microcontroller. A TTL USB to Serial module is an
-   IC that helps to translate UART signal to USB signal so that we can
-   see uart log printed on our PC. This module is often found on many
-   development boards, including ameba. However, the module on Ameba is
-   reserved for LOG UART and Firmware uploading, that is why we need a
-   separate module to communicate between ameba and PC.
-
-   There are currently 2 sets of UART available to MicroPython users and
-   they are,
-
-==== ===== =====
-Unit TX    RX
-==== ===== =====
-0    PA_21 PA_22
-3    PA_26 PA_25
-==== ===== =====
-
-Here we are using unit 0 to demonstrate how uart works on ameba.
-
-Connect TTL module to PA_21 and PA_22 as shown below,
-
-   |A picture containing treemap chart Description automatically
-   generated|
-
-Then, copy and paste the following code line by line into REPL to see
-its effect.
-
-
->>> from machine import UART
->>> uart = UART(tx="PA_21", rx= "PA_22")
->>> uart.init()
->>> uart.write('hello')
->>> uart.read(5) # read up to 5 bytes
-
-
-
 **Constructors**
 
 **UART(**\ *unit*\ [optional]\ *, baudrate*\ [optional]\ *,
