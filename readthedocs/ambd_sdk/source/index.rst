@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ambd_sdk's documentation!
-====================================
+Welcome to AmebaD_SDK documentation!
+=======================================
 This is the Ameba Standard SDK online documentation
 
 Ameba RTL8722DM  (AMB 21)
