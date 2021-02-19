@@ -23,6 +23,6 @@ Ameba RTL8722DM  (AMB 21)
 
 
 
-.. |image1| image:: media/imageIndex.jpg
+.. |image1| image:: media/imageindex.jpg
    :width: 5.44028in
    :height: 2.90486in
