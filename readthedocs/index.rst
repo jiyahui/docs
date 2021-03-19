@@ -11,7 +11,7 @@ This is the Ameba Arduino online documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Table of Contents:
+   :caption: Open Source SDKs:
    
    ambd_arduino/source/index
    ambd_micropython/source/index
