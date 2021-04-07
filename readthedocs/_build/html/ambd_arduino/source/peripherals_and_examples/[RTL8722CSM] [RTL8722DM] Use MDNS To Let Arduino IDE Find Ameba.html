@@ -84,12 +84,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Table of Contents:</span></p>
+              <p class="caption"><span class="caption-text">Open Source SDKs:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Welcome to amebaDocs’s documentation!</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../download/index.html">Download</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Peripherals &amp; Examples</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Arduino SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/source/index.html">Micropython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../ambd_mini/source/index.html">AmebaD-mini</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../ambd_mini/source/getting_started/RTL8722DM_mini_Arduino%20SDK_getting%20start_31Mar2021.html">Getting Started with RTL8722DM_mini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ambd_mini/source/download/index.html">Download</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../ambd_mini/source/peripherals_and_examples/index.html">Peripherals &amp; Examples</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Basic%20Examples.html">Basic Examples</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="Network%20Examples.html">Network Examples</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="%5BRTL8722CSM%5D%20%5BRTL8722DM%5D%20Scan%20available%20WiFi%20hotspots%20in%20the%20surroundings.html">[RTL8722CSM] [RTL8722DM] Scan available WiFi hotspots in the surroundings</a></li>
@@ -127,17 +130,12 @@
 <li class="toctree-l3"><a class="reference internal" href="Components%20used.html">Components used</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../board_hdk/index.html">Board HDK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api_documents/index.html">API Documents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resources/index.html">Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../support/index.html">Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ambd_mini/source/board_hdk/index.html">Board HDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ambd_mini/source/api_documents/index.html">API Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ambd_mini/source/resources/index.html">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ambd_mini/source/support/index.html">Support</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#search">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/source/index.html">Welcome to amebaDocs’s documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/source/index.html#search">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Welcome to ambd_sdk’s documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 
             
@@ -186,7 +184,7 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../index.html">Welcome to amebaDocs’s documentation!</a> &raquo;</li>
+          <li><a href="../index.html">Arduino SDK</a> &raquo;</li>
         
           <li><a href="index.html">Peripherals &amp; Examples</a> &raquo;</li>
         
@@ -243,13 +241,13 @@ example, “File” -&gt; “Examples” -&gt; “AmebaMDNS” -&gt; “mdns_on_
 You need to input ssid and password of the AP because the example will
 use WiFi connection. And you can find out the naming of the service at
 the place where it declares MDNS Service. The example uses the default
-name “MyAmeba” and the name is changeable.<a class="reference internal" href="../../../_images/image157.png"><img alt="1" src="../../../_images/image157.png" style="width: 5.20833in; height: 3.04861in;" /></a>Next, go to (“Tools” -&gt;
+name “MyAmeba” and the name is changeable.<a class="reference internal" href="../../../_images/image164.png"><img alt="1" src="../../../_images/image164.png" style="width: 5.20833in; height: 3.04861in;" /></a>Next, go to (“Tools” -&gt;
 “Port”), and you can find out at least one Serial Port. This port is
 simulated by Ameba board via USB. Choose this port and upload the
-compiled code to Ameba.<a class="reference internal" href="../../../_images/image253.png"><img alt="2" src="../../../_images/image253.png" style="width: 5.47917in; height: 6.52083in;" /></a>After uploading the code, press the reset
+compiled code to Ameba.<a class="reference internal" href="../../../_images/image259.png"><img alt="2" src="../../../_images/image259.png" style="width: 5.47917in; height: 6.52083in;" /></a>After uploading the code, press the reset
 button on Ameba and waiting for Ameba to connect with AP and activate
 the mDNS service after a while. You can see the Log at the bottom of the
-Serial Monitor.<a class="reference internal" href="../../../_images/image336.png"><img alt="3" src="../../../_images/image336.png" style="width: 6.5in; height: 2.37847in;" /></a>Then you can find out the added item “Network
+Serial Monitor.<a class="reference internal" href="../../../_images/image338.png"><img alt="3" src="../../../_images/image338.png" style="width: 6.5in; height: 2.37847in;" /></a>Then you can find out the added item “Network
 Ports” <strong>“MyAmeba at 192.168.1.167 (Ameba RTL8722DM/RTL8722CSM)”</strong>,
 “MyAmeba” is the device name we set up, and “IP” is the IP address that
 AP assigned to Ameba, the IP address should be the same with the IP
@@ -257,7 +255,7 @@ shown in the Serial Monitor. Last, “Ameba RTL8722DM/RTL8722CSM” is the
 type name of the board, and it means that Ameba can let Arduino IDE
 identify the mDNS service successfully.(We still can not use the
 Internet to upload the code, and we will explain this part in the OTA
-example.)<a class="reference internal" href="../../../_images/image432.png"><img alt="4" src="../../../_images/image432.png" style="width: 6.5in; height: 5.55417in;" /></a>If you cannot find the Network ports on your Arduino
+example.)<a class="reference internal" href="../../../_images/image433.png"><img alt="4" src="../../../_images/image433.png" style="width: 6.5in; height: 5.55417in;" /></a>If you cannot find the Network ports on your Arduino
 IDE, please check：</p>
 <ul class="simple">
 <li><p>Does your computer in the same local area network with the Ameba?</p></li>

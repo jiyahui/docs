@@ -82,14 +82,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">Table of Contents:</span></p>
+              <p class="caption"><span class="caption-text">Open Source SDKs:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to amebaDocs’s documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#search">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/source/index.html">Welcome to amebaDocs’s documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/source/index.html#search">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Welcome to ambd_sdk’s documentation!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Arduino SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_micropython/source/index.html">Micropython SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_sdk/source/index.html">Standard SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ambd_mini/source/index.html">AmebaD-mini</a></li>
 </ul>
 
             
@@ -171,9 +169,9 @@ air. The sensor output its data via UART. The PMS3003 (or PMS5003)
 sensor detects the concentration value of PM 1.0, PM 2.5, PM 10. Take PM
 2.5 for example, it stands for the fine particles with a diameter of 2.5
 micrometers or less. Open the example in “File” -&gt; “Examples” -&gt;
-“AmebaSoftwareSerial” -&gt; “PMS3003_AirQuality”<a class="reference internal" href="../../../_images/image115.png"><img alt="5-2-1" src="../../../_images/image115.png" style="width: 6.20139in; height: 8.67361in;" /></a></p>
+“AmebaSoftwareSerial” -&gt; “PMS3003_AirQuality”<a class="reference internal" href="../../../_images/image122.png"><img alt="5-2-1" src="../../../_images/image122.png" style="width: 6.20139in; height: 8.67361in;" /></a></p>
 <p>There are 8 pins in PMS3003:</p>
-<a class="reference internal image-reference" href="../../../_images/image215.png"><img alt="5-2-2" src="../../../_images/image215.png" style="width: 4.59028in; height: 4.0625in;" /></a>
+<a class="reference internal image-reference" href="../../../_images/image222.png"><img alt="5-2-2" src="../../../_images/image222.png" style="width: 4.59028in; height: 4.0625in;" /></a>
 <p>PMS3003 requires 5V power, but the working voltage of its IC is 3.3C.
 Therefore, the working voltage of Reset, TX, RX, Set are 3.3 as well. If
 the “Set” pin is pulled to high, the PMS3003 is put to operating mode.
@@ -182,10 +180,10 @@ TX/RX pins are for UART connection. Under operating mode, PMS3003 output
 the data it reads continuously. Each data is of 32 byte, please refer to
 the following article for detailed data format
 information: <a class="reference external" href="https://www.dfrobot.com/wiki/index.php?title=PM2.5_laser_dust_sensor_SKU:SEN0177">https://www.dfrobot.com/wiki/index.php?title=PM2.5_laser_dust_sensor_SKU:SEN0177</a> RTL8722
-wiring diagram:<a class="reference internal" href="../../../_images/image310.png"><img alt="2-2-4" src="../../../_images/image310.png" style="width: 6.5in; height: 5.29306in;" /></a>In this example, we do not use the “Set” and
+wiring diagram:<a class="reference internal" href="../../../_images/image312.png"><img alt="2-2-4" src="../../../_images/image312.png" style="width: 6.5in; height: 5.29306in;" /></a>In this example, we do not use the “Set” and
 “Reset” pins. Compile the code and upload it to Ameba. After pressing
 the Reset button, Ameba starts to output the PM 2.5 data to serial
-monitor.<a class="reference internal" href="../../../_images/image410.png"><img alt="5-2-4" src="../../../_images/image410.png" style="width: 5.95139in; height: 3.75694in;" /></a></p>
+monitor.<a class="reference internal" href="../../../_images/image411.png"><img alt="5-2-4" src="../../../_images/image411.png" style="width: 5.95139in; height: 3.75694in;" /></a></p>
 </div>
 
 

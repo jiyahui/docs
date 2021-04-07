@@ -59,6 +59,10 @@ API Documents
    WiFi_Readme
    Class TwoWire
    Wire_Readme
+   Class AudioCodec
+   Class FatFsSD
+   Class FFT
+   Class SdFatFile
 
  
 

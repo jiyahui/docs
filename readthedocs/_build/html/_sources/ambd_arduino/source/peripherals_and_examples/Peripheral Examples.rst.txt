@@ -44,3 +44,13 @@ Peripheral Examples
    [RTL8722CSM] [RTL8722DM] A Simple RTC Example
    [RTL8722CSM] [RTL8722DM] Simple RTC Alarm
    [RTL8722CSM] [RTL8722DM] Watchdog Timer Simple Example
+   BasicInputOutput
+   FFT
+   InputFFT
+   OutputSineWave
+   File system in SD card
+   HelloWorld
+   MagicWand
+   MicroSpeech
+   PersonDetection
+
