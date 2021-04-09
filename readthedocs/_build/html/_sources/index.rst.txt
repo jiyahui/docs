@@ -15,10 +15,10 @@ All getting-started guides, examples, tutorials, API reference and datasheet etc
    :maxdepth: 1
    :caption: Open Source SDKs:
    
-   ambd_arduino/source/index
+   source/arduino_index
    ambd_micropython/source/index
    ambd_sdk/source/index 
-   ambd_mini/source/index
+
 
 Search
 ==================
