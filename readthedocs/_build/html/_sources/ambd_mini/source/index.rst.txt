@@ -14,7 +14,7 @@ This is the AmebaD-mini online documentation
    :maxdepth: 1
    :caption: Table of Contents:
    
-   getting_started/RTL8722DM_mini_Arduino SDK_getting start_31Mar2021
+   getting_started/RTL8722DM_mini_Arduino SDK_getting start
    Board HDK/index
    download/index
    peripherals_and_examples/index

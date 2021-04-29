@@ -41,6 +41,6 @@ FFT results of audio samples will be displayed. Try playing music or use
 a smartphone app to generate a sine wave into the microphone, and you
 should be able to see the FFT output change.
 
-.. image:: InputFFT\media\image3.png
+.. image:: ../media/InputFFT/image3.png
    :width: 4.02083in
    :height: 1.92708in
